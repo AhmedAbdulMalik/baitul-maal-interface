@@ -5,7 +5,7 @@
 const CONFIG = {
   UPI_ID: "9908529507@ibl",
   ORG_NAME: "SIO TOLICHOWKI",
-  APPS_SCRIPT_URL: "https://script.google.com/macros/s/AKfycbzXZVOUQAzxy1JFfitq1LrjMtIJ7HJ_cp8pZh6yz-GeqtW-3pTdKtJ0dt6MxavKkK96/exec",
+  APPS_SCRIPT_URL: "https://script.google.com/macros/s/AKfycbxY1wb5nb9nHHwDA12A2fqqOurGM1nXl0v-gLbVGrAwY8dzBRmNWHON_6hm6vCYGF5E/exec",
   TOKEN: "sio-donations-2026" // MUST match Apps Script SECRET_TOKEN !!!
 };
 /* ========================================= */
@@ -86,14 +86,16 @@ async function logToSheet(payload) {
   const res = await fetch(CONFIG.APPS_SCRIPT_URL, {
     method: "POST",
     headers: {
-      "Content-Type": "application/json",
-      "X-Donations-Token": CONFIG.TOKEN
+      "Content-Type": "application/json"
     },
-    body: JSON.stringify(payload)
+    body: JSON.stringify({
+      ...payload,
+      token: CONFIG.TOKEN
+    })
   });
 
   if (!res.ok) {
-    throw new Error("Logging failed: " + res.status);
+    throw new Error("Logging failed");
   }
 
   return res.json();
