@@ -5,7 +5,7 @@
 const CONFIG = {
   UPI_ID: "9908529507@ibl",
   ORG_NAME: "SIO TOLICHOWKI",
-  APPS_SCRIPT_URL: "https://script.google.com/macros/s/https://script.google.com/macros/s/AKfycbwo85JXr0C1xPrgPDG1hg4dlD7q8SB4yCZ1NOA0DcSdZmtWwQ3UZGNvwmNAO0rVlGYq/exec-YiEo3HkqCH4c_HpW1dtrf2AcZDU/exec",
+  APPS_SCRIPT_URL: "https://script.google.com/macros/s/AKfycbwo85JXr0C1xPrgPDG1hg4dlD7q8SB4yCZ1NOA0DcSdZmtWwQ3UZGNvwmNAO0rVlGYq/exec-YiEo3HkqCH4c_HpW1dtrf2AcZDU/exec",
   TOKEN: "sio-donations-2026" // MUST match Apps Script SECRET_TOKEN !!!
 };
 /* ========================================= */
