@@ -4,6 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>SIO Tolichowki Baitul Maal Interface (Members ONLY)</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script src="script.js" defer></script>
 
@@ -14,7 +15,7 @@
     <div class="quote-wrap" id="intro">
       <div class="quote" id="quoteText"></div>
       <div class="sub">— <span id="quoteAuthor">Unknown</span></div>
-      <div class="muted sm">Loading donation interface…</div>
+      <div class="muted sm"></div>
     </div>
 
     <div class="form" id="donationForm" aria-hidden="true">
@@ -26,15 +27,15 @@
           <input id="name" name="name" autocomplete="name" type="text" placeholder="Full name" maxlength="100" />
         </div>
         <div class="field">
-          <label for="unit">Unit (place)</label>
-          <input id="unit" name="unit" type="text" placeholder="Ward / College / Village" maxlength="100" />
+          <label for="unit">Unit</label>
+          <input id="unit" name="unit" type="text" placeholder="" maxlength="100" />
         </div>
       </div>
 
       <div class="grid row-2" style="margin-top:0.6rem">
         <div class="field">
           <label for="amount">Amount (INR)</label>
-          <input id="amount" name="amount" type="number" placeholder="e.g. 500" min="1" step="1" />
+          <input id="amount" name="amount" type="number" placeholder="e.g. 100" min="1" step="1" />
         </div>
         <div class="field">
           <label for="month">Month (purpose)</label>
@@ -62,9 +63,6 @@
 
       <div id="message" style="display:none"></div>
 
-      <div style="margin-top:0.9rem;font-size:0.82rem;color:var(--muted)">
-        Admin note: this page sends the data to your Google Sheets Apps Script endpoint. Replace placeholders in the script.
-      </div>
     </div>
   </div>
 </div>

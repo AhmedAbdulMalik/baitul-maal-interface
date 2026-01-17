@@ -12,8 +12,8 @@ const CONFIG = {
 
 /* Quote */
 const QUOTE = {
-  text: "Small acts, when multiplied by millions of people, can transform the world.",
-  author: "Howard Zinn"
+  text: "And spend in the way of Allah and do not throw [yourselves] with your [own] hands into destruction [by refraining]. And do good; indeed, Allah loves the doers of good.",
+  author: "Al-Baqarah : 195"
 };
 
 /* DOM references */
@@ -28,20 +28,7 @@ const msgBox = document.getElementById("message");
 authorEl.textContent = QUOTE.author;
 
 /* Typewriter animation */
-function typeWriter(text, el, delay = 28) {
-  el.textContent = "";
-  let i = 0;
 
-  return new Promise((res) => {
-    const t = setInterval(() => {
-      el.textContent += text.charAt(i++);
-      if (i >= text.length) {
-        clearInterval(t);
-        res();
-      }
-    }, delay);
-  });
-}
 
 /* Utilities */
 function makeClientRef() {
@@ -111,13 +98,16 @@ async function logToSheet(payload) {
 
 
 /* Init */
-(async function init() {
-  await typeWriter(QUOTE.text, quoteEl, 26);
-  await new Promise(r => setTimeout(r, 900));
-  document.getElementById("intro").style.display = "none";
-  donationForm.style.display = "block";
-  donationForm.setAttribute("aria-hidden", "false");
+(function init() {
+  quoteEl.textContent = QUOTE.text;
+
+  setTimeout(() => {
+    document.getElementById("intro").style.display = "none";
+    donationForm.style.display = "block";
+    donationForm.setAttribute("aria-hidden", "false");
+  }, 4000); // overall intro duration
 })();
+
 
 /* Donate */
 donateBtn.addEventListener("click", async () => {
