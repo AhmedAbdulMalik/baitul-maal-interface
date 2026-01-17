@@ -19,26 +19,32 @@
     </div>
 
     <div class="form" id="donationForm" aria-hidden="true">
-      <h1 id="title" style="margin:0 0 0.6rem 0;font-size:1.15rem">Make a donation</h1>
+      <h1 id="title" style="margin:0 0 0.6rem 0;font-size:1.15rem">Fulfil your responsiblity as a member</h1>
 
       <div class="grid row-2">
         <div class="field">
           <label for="name">Name</label>
           <input id="name" name="name" autocomplete="name" type="text" placeholder="Full name" maxlength="100" />
         </div>
-        <div class="field">
-          <label for="unit">Unit</label>
-          <input id="unit" name="unit" type="text" placeholder="" maxlength="100" />
-        </div>
-      </div>
+       <div class="field">
+  <label for="unit">Unit</label>
+  <select id="unit" required>
+    <option value="">Select your unit</option>
+
+    <option value="7 Tombs Unit">7 Tombs Unit</option>
+    <option value="Gulshan Colony Unit">Gulshan Colony Unit</option>
+    <option value="Nadeem Colony Unit">Nadeem Colony Unit</option>
+  </select>
+</div>
+
 
       <div class="grid row-2" style="margin-top:0.6rem">
         <div class="field">
           <label for="amount">Amount (INR)</label>
-          <input id="amount" name="amount" type="number" placeholder="e.g. 100" min="1" step="1" />
+          <input id="amount" name="amount" type="number" placeholder="upto you :)" min="1" step="1" />
         </div>
         <div class="field">
-          <label for="month">Month (purpose)</label>
+          <label for="month">Month</label>
           <select id="month" name="month">
             <option value="">Select month</option>
             <option>January</option><option>February</option><option>March</option><option>April</option>
@@ -49,19 +55,32 @@
       </div>
 
       <div class="actions">
-        <button class="primary" id="donateBtn" type="button">Donate via UPI</button>
+        <button class="primary" id="donateBtn" type="button">Use UPI App</button>
         <button class="ghost" id="copyLink" type="button">Copy UPI link</button>
         <div id="statusIndicator" class="muted sm" aria-live="polite"></div>
       </div>
 
       <div class="note sm" id="noteArea">
-        After you click Donate, your UPI app will open. This records an <strong>INITIATED</strong> attempt in the sheet, 
-        verification of payments
+        After you click <strong>Use UPI App</strong>, your UPI app will open. You should see <strong>KHAJA NAYEEM AHMED</strong> as the name, 
+        and verification of payments
          to be done  manually later.
          <i>In sha Allah</i> 
       </div>
 
-      <div id="message" style="display:none"></div>
+      <footer class="footer">
+  <a href="https://github.com/ahmedabdulmalik/baitul-maal-interface"
+     target="_blank"
+     rel="noopener noreferrer">
+    Docs
+  </a>
+
+  
+  <span class="sep">·</span>
+
+  <span><a href="https://www.google.com/maps/place/Tolichowki"
+     target="_blank"
+     rel="noopener noreferrer">Made with ❤️  in Tolichowki  </a></span>
+</footer>
 
     </div>
   </div>

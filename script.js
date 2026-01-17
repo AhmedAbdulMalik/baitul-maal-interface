@@ -12,7 +12,7 @@ const CONFIG = {
 
 /* Quote */
 const QUOTE = {
-  text: "And spend in the way of Allah and do not throw [yourselves] with your [own] hands into destruction [by refraining]. And do good; indeed, Allah loves the doers of good.",
+  text: "And spend in the way of Allah and do not throw [yourselves] with your [own] hands into destruction [by refraining].And do good; indeed, Allah loves the doers of good.",
   author: "Al-Baqarah : 195"
 };
 
@@ -105,7 +105,7 @@ async function logToSheet(payload) {
     document.getElementById("intro").style.display = "none";
     donationForm.style.display = "block";
     donationForm.setAttribute("aria-hidden", "false");
-  }, 4000); // overall intro duration
+  }, 6000); // overall intro duration
 })();
 
 

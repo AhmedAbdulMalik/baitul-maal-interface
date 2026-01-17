@@ -34,18 +34,50 @@ html, body {
   box-shadow: 0 12px 28px rgba(0,0,0,0.08);
 }
 
+.footer {
+  margin-top: 2.6rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--border);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.footer a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer .sep {
+  opacity: 0.6;
+}
+
+
 /* Quote block */
 .quote-wrap {
-  max-width: 680px;
-  margin: 0 auto;
+  max-width: 600px;
+  margin: 0;
 }
 
 .quote {
-  font-size: 1.3rem;
-  line-height: 1.7;
+  font-size: 1.25rem;
+  line-height: 1.75;
   font-weight: 500;
   color: var(--accent);
-  margin: 0 0 1.2rem 0;
+
+  text-align: left;      /* key change */
+  letter-spacing: 0.01em;
+
+  margin: 0 0 1.6rem 0;
   opacity: 0;
   animation: fadeIn 1.8s ease forwards;
 }
